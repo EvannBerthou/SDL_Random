@@ -6,7 +6,7 @@
 # It is included in the main 'build.ninja'.
 
 # =============================================================================
-# Project: SDLTest
+# Project: GameOfLife
 # Configuration: 
 # =============================================================================
 # =============================================================================
@@ -42,7 +42,7 @@ rule C_EXECUTABLE_LINKER__build.2eo
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake -S/home/sutalite/Programming/C/SDL_Random/CircleSDL -B/home/sutalite/Programming/C/SDL_Random/CircleSDL
+  command = /usr/bin/cmake -S/home/sutalite/Programming/C/GameOfLife -B/home/sutalite/Programming/C/GameOfLife
   description = Re-running CMake...
   generator = 1
 

@@ -1,0 +1,10 @@
+create grid which handles every cells at once:
+	draw
+	neighbours
+	bondaries
+
+>implement game logic
+
+implement mouse support for creating and deleting cells
+implement pause -> just stop calling game logic funs in game loop
+dont base the game on FPS, use deltaTime : research on how to get it

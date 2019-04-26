@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: SDLTest
+# Project: GameOfLife
 # Configuration: 
 # =============================================================================
 
@@ -34,7 +34,7 @@ include rules.ninja
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/sutalite/Programming/C/SDL_Random/SDL && /usr/bin/cmake -S/home/sutalite/Programming/C/SDL_Random/SDL -B/home/sutalite/Programming/C/SDL_Random/SDL
+  COMMAND = cd /home/sutalite/Programming/C/GameOfLife && /usr/bin/cmake -S/home/sutalite/Programming/C/GameOfLife -B/home/sutalite/Programming/C/GameOfLife
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -53,6 +53,18 @@ build CMakeFiles/build.o.dir/src/main.c.o: C_COMPILER__build.2eo src/main.c || c
   INCLUDES = -I.
   OBJECT_DIR = CMakeFiles/build.o.dir
   OBJECT_FILE_DIR = CMakeFiles/build.o.dir/src
+build CMakeFiles/build.o.dir/src/cell.c.o: C_COMPILER__build.2eo src/cell.c || cmake_object_order_depends_target_build.o
+  DEP_FILE = CMakeFiles/build.o.dir/src/cell.c.o.d
+  FLAGS = -Wall      -Werror      -Wextra      -Wconversion      -Wunused      -Wunused-function      -Wunused-label      -Wunused-macros      -Wunused-parameter      -Wunused-value      -Wunused-variable      -Wcast-align      -Wcast-qual      -Wredundant-decls      -Wnested-externs      -Wpointer-arith      -Wshadow      -Wwrite-strings      -Wswitch      -Wmissing-field-initializers      -fno-common      -pedantic      -lSDL2-2.0      -std=c11
+  INCLUDES = -I.
+  OBJECT_DIR = CMakeFiles/build.o.dir
+  OBJECT_FILE_DIR = CMakeFiles/build.o.dir/src
+build CMakeFiles/build.o.dir/src/dynarray.c.o: C_COMPILER__build.2eo src/dynarray.c || cmake_object_order_depends_target_build.o
+  DEP_FILE = CMakeFiles/build.o.dir/src/dynarray.c.o.d
+  FLAGS = -Wall      -Werror      -Wextra      -Wconversion      -Wunused      -Wunused-function      -Wunused-label      -Wunused-macros      -Wunused-parameter      -Wunused-value      -Wunused-variable      -Wcast-align      -Wcast-qual      -Wredundant-decls      -Wnested-externs      -Wpointer-arith      -Wshadow      -Wwrite-strings      -Wswitch      -Wmissing-field-initializers      -fno-common      -pedantic      -lSDL2-2.0      -std=c11
+  INCLUDES = -I.
+  OBJECT_DIR = CMakeFiles/build.o.dir
+  OBJECT_FILE_DIR = CMakeFiles/build.o.dir/src
 
 # =============================================================================
 # Link build statements for EXECUTABLE target build.o
@@ -61,7 +73,7 @@ build CMakeFiles/build.o.dir/src/main.c.o: C_COMPILER__build.2eo src/main.c || c
 #############################################
 # Link the executable build.o
 
-build build.o: C_EXECUTABLE_LINKER__build.2eo CMakeFiles/build.o.dir/src/main.c.o
+build build.o: C_EXECUTABLE_LINKER__build.2eo CMakeFiles/build.o.dir/src/main.c.o CMakeFiles/build.o.dir/src/cell.c.o CMakeFiles/build.o.dir/src/dynarray.c.o
   FLAGS = -Wall      -Werror      -Wextra      -Wconversion      -Wunused      -Wunused-function      -Wunused-label      -Wunused-macros      -Wunused-parameter      -Wunused-value      -Wunused-variable      -Wcast-align      -Wcast-qual      -Wredundant-decls      -Wnested-externs      -Wpointer-arith      -Wshadow      -Wwrite-strings      -Wswitch      -Wmissing-field-initializers      -fno-common      -pedantic      -lSDL2-2.0      -std=c11
   LINK_FLAGS = -rdynamic
   OBJECT_DIR = CMakeFiles/build.o.dir
@@ -74,7 +86,7 @@ build build.o: C_EXECUTABLE_LINKER__build.2eo CMakeFiles/build.o.dir/src/main.c.
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/sutalite/Programming/C/SDL_Random/SDL && /usr/bin/cmake-gui -S/home/sutalite/Programming/C/SDL_Random/SDL -B/home/sutalite/Programming/C/SDL_Random/SDL
+  COMMAND = cd /home/sutalite/Programming/C/GameOfLife && /usr/bin/cmake-gui -S/home/sutalite/Programming/C/GameOfLife -B/home/sutalite/Programming/C/GameOfLife
   DESC = Running CMake cache editor...
   pool = console
   restat = 1

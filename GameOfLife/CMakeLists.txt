@@ -1,10 +1,14 @@
 cmake_minimum_required (VERSION 2.6)
-project (SDLTest)
+project (GameOfLife)
 
 include_directories(${PROJECT_SOURCE_DIR})
 add_executable(build.o
     src/main.c
+    src/cell.c
+	src/dynarray.c
     src/main.h
+    src/cell.h
+	src/dynarray.h
     )
 
 if(("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU") OR ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "CLANG"))
