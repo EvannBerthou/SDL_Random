@@ -1,0 +1,3 @@
+/home/sutalite/Programming/c/SDL/CMakeFiles/rebuild_cache.dir
+/home/sutalite/Programming/c/SDL/CMakeFiles/build.o.dir
+/home/sutalite/Programming/c/SDL/CMakeFiles/edit_cache.dir

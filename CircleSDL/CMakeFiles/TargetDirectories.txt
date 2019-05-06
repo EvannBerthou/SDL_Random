@@ -1,0 +1,3 @@
+/home/sutalite/Programming/c/CircleSDL/CMakeFiles/rebuild_cache.dir
+/home/sutalite/Programming/c/CircleSDL/CMakeFiles/build.o.dir
+/home/sutalite/Programming/c/CircleSDL/CMakeFiles/edit_cache.dir

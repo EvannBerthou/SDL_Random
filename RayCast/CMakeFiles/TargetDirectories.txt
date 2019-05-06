@@ -1,0 +1,3 @@
+/home/sutalite/Programming/c/RayCast/CMakeFiles/rebuild_cache.dir
+/home/sutalite/Programming/c/RayCast/CMakeFiles/build.o.dir
+/home/sutalite/Programming/c/RayCast/CMakeFiles/edit_cache.dir

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sutalite/Programming/c/RayCast/src/line.h
+math.h
+/home/sutalite/Programming/c/RayCast/src/math.h
+
+/home/sutalite/Programming/c/RayCast/src/main.c
+stdio.h
+-
+SDL2/SDL.h
+-
+math.h
+/home/sutalite/Programming/c/RayCast/src/math.h
+line.h
+/home/sutalite/Programming/c/RayCast/src/line.h
+
