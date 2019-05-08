@@ -1,3 +1,0 @@
-/home/sutalite/Programming/C/GameOfLife/CMakeFiles/rebuild_cache.dir
-/home/sutalite/Programming/C/GameOfLife/CMakeFiles/build.o.dir
-/home/sutalite/Programming/C/GameOfLife/CMakeFiles/edit_cache.dir

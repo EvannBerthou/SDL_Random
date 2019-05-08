@@ -7,7 +7,7 @@
 
 #define WIDTH 800
 #define HEIGHT 800
-#define CELL_SIZE 10
+#define CELL_SIZE 5
 
 void ClearScreen(SDL_Renderer* renderer){
     SDL_SetRenderDrawColor(renderer, 0,0,0,255);
@@ -34,7 +34,7 @@ int main(void){
         return EXIT_FAILURE;
     }
 
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED|SDL_RENDERER_PRESENTVSYNC);
 
 	
 	Dynarray cells;
