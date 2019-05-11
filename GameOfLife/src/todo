@@ -1,5 +1,3 @@
-cache cell neighbours
-
 implement mouse support for killing and living cells
 implement pause -> just stop calling game logic funcs in game loop
 dont base the game on FPS, use deltaTime : research on how to get it

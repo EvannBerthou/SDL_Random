@@ -7,7 +7,21 @@
 
 #define WIDTH 800
 #define HEIGHT 800
-#define CELL_SIZE 5
+#define CELL_SIZE 10
+
+Dynarray create_grid(){
+    Dynarray cells;
+	init_array(&cells, sizeof(Cell));
+
+	for (int i = 0; i < WIDTH/CELL_SIZE; i++){
+		for (int j = 0; j < HEIGHT/CELL_SIZE; j++){
+			Cell result = create_cell(i,j, CELL_SIZE);
+            array_push(&cells, &result);
+        }
+    }
+    return cells;
+}
+	
 
 void ClearScreen(SDL_Renderer* renderer){
     SDL_SetRenderDrawColor(renderer, 0,0,0,255);
@@ -35,17 +49,11 @@ int main(void){
     }
 
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED|SDL_RENDERER_PRESENTVSYNC);
-
 	
-	Dynarray cells;
-	init_array(&cells, sizeof(Cell));
-	for (int i = 0; i < WIDTH/CELL_SIZE; i++)
-		for (int j = 0; j < HEIGHT/CELL_SIZE; j++){
-			Cell result = create_cell(i,j, CELL_SIZE);
-			array_push(&cells, &result);
-		}
-
+    
+    Dynarray cells = create_grid();
     Cell* cs = array_data(&cells);
+    cells_set_neighbours(cells);
 
     SDL_Event event;
     int running = 1;
@@ -54,14 +62,11 @@ int main(void){
 
         for(size_t i = 0; i < cells.count; i++){
             draw_cell(renderer, cs[i]);
-            Dynarray neighbours = cell_get_neighbours(&cells, cs[i], HEIGHT/CELL_SIZE);
-            Cell* c = array_data(&neighbours);
-            cs[i].next_status = cell_get_next_status(cs[i], c);
-            free_array(&neighbours);
+            cs[i].next_status = cell_get_next_status(cs[i]);
         }
 
         for(size_t i = 0; i < cells.count; i++){
-            cell_set_status(&cs[i], cs[i].next_status);
+            cell_set_status(&cs[i]);
         }
         
        while (SDL_PollEvent(&event)){

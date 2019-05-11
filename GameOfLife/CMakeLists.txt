@@ -37,5 +37,6 @@ if(("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU") OR ("${CMAKE_CXX_COMPILER_ID}" ST
      -fno-common \
      -pedantic \
      -lSDL2-2.0 \
+     -g \
      -std=c11")
 endif()
